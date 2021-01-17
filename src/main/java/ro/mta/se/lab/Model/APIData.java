@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import static java.lang.Math.round;
@@ -50,7 +49,6 @@ public class APIData {
         if(param.equals("description")){
             toReturn = toReturn.substring(1, toReturn.length() - 1);
         }
-        System.out.println(toReturn);
         return toReturn;
     }
 }

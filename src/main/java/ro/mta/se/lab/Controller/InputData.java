@@ -5,41 +5,45 @@ import javafx.collections.ObservableList;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InputData {
-    public ObservableList<String> getCountryList(){
+    private String filename;
+
+    public InputData(String _filename) {
+        filename = _filename;
+    }
+
+    public ObservableList<String> getCountryList() {
         ObservableList<String> countryList = FXCollections.observableArrayList();
         try {
-            System.out.println("Working Directory = " + System.getProperty("user.dir"));
-            File myObj = new File("src/main/resources/data/input.txt");
+            File myObj = new File(filename);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String country = data.split("\t")[4];
-                if(countryList.contains(country)){
+                if (countryList.contains(country)) {
                     continue;
                 }
                 countryList.add(country);
             }
             myReader.close();
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException | ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
         }
 
         return countryList.sorted();
     }
 
-    public ObservableList<String> getCityList(String _country){
+    public ObservableList<String> getCityList(String _country) {
         ObservableList<String> cityList = FXCollections.observableArrayList();
         try {
-            File myObj = new File("src/main/resources/data/input.txt");
+            File myObj = new File(filename);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String country = data.split("\t")[4];
-                if(country.equals(_country)){
+                if (country.equals(_country)) {
                     String city = data.split("\t")[1];
                     cityList.add(city);
                 }
