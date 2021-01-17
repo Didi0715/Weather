@@ -7,11 +7,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eddcf5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.se.lab.Controller.WeatherAppController">
    <children>
-      <ChoiceBox layoutX="71.0" layoutY="72.0" prefWidth="150.0" />
-      <ImageView fitHeight="96.0" fitWidth="103.0" layoutX="82.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/cloudjpg.jpg" />
-         </image></ImageView>
+      <ChoiceBox fx:id="country" layoutX="71.0" layoutY="72.0" prefWidth="150.0" />
+      <ImageView fx:id="icon" fitHeight="96.0" fitWidth="103.0" layoutX="82.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="label1" layoutX="72.0" layoutY="36.0" prefHeight="26.0" prefWidth="71.0" text="Country" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
@@ -21,61 +18,52 @@
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="345.0" layoutY="72.0" prefWidth="150.0" />
-      <Label layoutX="81.0" layoutY="182.0" text="Oras" textFill="#4f0569">
+      <ChoiceBox fx:id="city" layoutX="345.0" layoutY="72.0" prefWidth="150.0" />
+      <Label fx:id="day" layoutX="81.0" layoutY="217.0" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="81.0" layoutY="217.0" text="Ziua" textFill="#4f0569">
+      <Label fx:id="hour" layoutX="178.0" layoutY="217.0" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="217.0" text="ora" textFill="#4f0569">
+      <Label fx:id="description" layoutX="82.0" layoutY="240.0" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="164.0" layoutY="217.0" text="pm/am" textFill="#4f0569">
+      <Label fx:id="temp" layoutX="198.0" layoutY="304.0" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="82.0" layoutY="240.0" text="ploaie/soare" textFill="#4f0569">
+      <Label fx:id="humidity_head" layoutX="378.0" layoutY="226.0" text="Humidity:" textFill="#4f0569" visible="false">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="198.0" layoutY="304.0" text="grade" textFill="#4f0569">
+      <Label fx:id="wind_head" layoutX="383.0" layoutY="270.0" text="Wind:" textFill="#4f0569" visible="false">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="378.0" layoutY="226.0" text="Humidity:" textFill="#4f0569">
+      <Label fx:id="humidity" layoutX="473.0" layoutY="226.0" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="383.0" layoutY="270.0" text="Wind:" textFill="#4f0569">
+      <Label fx:id="wind" layoutX="441.0" layoutY="270.0" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="473.0" layoutY="226.0" text="Label" textFill="#4f0569">
+      <Label fx:id="select" layoutX="158.0" layoutY="148.0" text="Please select a country and a city 😊" textFill="#4f0569">
          <font>
             <Font name="Book Antiqua" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="441.0" layoutY="270.0" text="Label" textFill="#4f0569">
-         <font>
-            <Font name="Book Antiqua" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="158.0" layoutY="148.0" text="Please select a country and a city 😊" textFill="#4f0569">
-         <font>
-            <Font name="Book Antiqua" size="18.0" />
-         </font>
-      </Label>
+      <Button fx:id="did" layoutX="261.0" layoutY="107.0" mnemonicParsing="false" onAction="#updateScreen" text="Search" />
    </children>
 </AnchorPane>
