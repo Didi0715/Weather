@@ -1,8 +1,12 @@
 package ro.mta.se.lab.Model;
 
-import ro.mta.se.lab.Controller.InputData;
-
 import java.io.*;
+
+/**
+ * Short class used to write to a history file.
+ *
+ * @author Adina-Luiza Ciobanu
+ */
 
 public class History {
     public void writeToFile(String city, String country, String temp, String description) {
@@ -10,7 +14,6 @@ public class History {
         try {
 
             BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/resources/data/history.txt",true));
-//            bw.write("Didi are mere");
              bw.write(dateTime.getYearMonthDay() + " " + dateTime.getTime() + " : " + city +
                     " " + country + " " + temp + "℃ " + description + "\n");
             bw.close();

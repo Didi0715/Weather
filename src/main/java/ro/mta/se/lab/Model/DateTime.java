@@ -3,6 +3,13 @@ package ro.mta.se.lab.Model;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Short class used for returning pretty format
+ * of multiple type of datetime formats.
+ *
+ * @author Adina-Luiza Ciobanu
+ */
+
 public class DateTime {
     public String getHour() {
         LocalTime localTime = LocalTime.now();

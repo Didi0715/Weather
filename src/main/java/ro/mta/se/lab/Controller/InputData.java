@@ -7,6 +7,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * Gets data from the input file and returns an ObservableList<String>
+ * in its functions.
+ *
+ * <p>Gets a list of countries and cities from input file input.txt
+ * and return an ObservableList<String> to be easily added to a
+ * ChoiceBox</p>
+ *
+ * @author Adina-Luiza Ciobanu
+ */
+
 public class InputData {
     private String filename;
 

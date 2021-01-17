@@ -14,6 +14,21 @@ import ro.mta.se.lab.Model.History;
 
 import java.io.IOException;
 
+/**
+ * Makes the connection between model and view.
+ *
+ * <p>In the initialize, there is the ChoiceBox populating
+ * and setting the event that when country box is changed,
+ * city box is updated. </p>
+ * <p>UpdateScreen function makes the requests and gets
+ * the information needed to update the user interface.</p>
+ *
+ * @see APIData
+ * @see InputData
+ *
+ * @author Adina-Luiza Ciobanu
+ */
+
 public class WeatherAppController {
     @FXML
     private Label label1;

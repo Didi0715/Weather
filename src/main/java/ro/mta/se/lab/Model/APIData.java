@@ -8,6 +8,18 @@ import java.net.URL;
 
 import static java.lang.Math.round;
 
+/**
+ * It creates the wanted link for the selected country and city to
+ * make possible the request to the API.
+ *
+ * <p>Creates a link, gets the JSON from the OpenWeatherMap API
+ * and makes easy getting an element such as temp, wind speed etc.</p>
+ *
+ * @author Adina-Luiza Ciobanu
+ *
+ * @see Parser
+ */
+
 public class APIData {
     private String JSONContent;
     private Parser parser;
