@@ -44,7 +44,7 @@ public class WeatherAppController {
 
 
     public void initialize(){
-        InputData inputData = new InputData();
+        InputData inputData = new InputData("src/main/resources/data/input.txt");
         ObservableList<String> list = inputData.getCountryList();
         country.setItems(list);
 
